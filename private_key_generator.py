@@ -1,7 +1,7 @@
 from Crypto.PublicKey import RSA
 from sympy import mod_inverse
 
-def generate_rsa_private_key(p, q, e=65537):
+def generate_rsa_private_key(p, q, e):
     # Step 1: Calculate n
     n = p * q
 
@@ -22,13 +22,13 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
-# Get user input for p and q
+# Get user input for p , q and e
 try:
     p = int(input("Enter a prime number p: "))
     q = int(input("Enter another prime number q: "))
-
+    e = int(input("Enter value of public exponent e:"))
     # Generate RSA private key components
-    n, e, d, p, q = generate_rsa_private_key(p, q)
+    n, e, d, p, q = generate_rsa_private_key(p, q, e)
 
     # Construct the RSA key
     key = RSA.construct((n, e, d, p, q))
