@@ -29,13 +29,13 @@ Usage
 
   1.Clone the repository:
 
-  git clone https://github.com/NafisNizar/RSA-Private-Key-Generator.git
+    git clone https://github.com/NafisNizar/RSA-Private-Key-Generator.git
 
-  cd RSA-Private-Key-Generator
+    cd RSA-Private-Key-Generator
 
   2.Run the script:
 
-  python rsa_key_generator.py
+    python rsa_key_generator.py
 
   Enter the two prime numbers pp and qq when prompted.
 
